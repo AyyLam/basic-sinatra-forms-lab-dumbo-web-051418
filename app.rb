@@ -1,5 +1,6 @@
 require 'sinatra/base'
 
+
 class App < Sinatra::Base
   
   get '/newteam' do 
@@ -8,6 +9,7 @@ class App < Sinatra::Base
   
   post '/newteam' do #make post request on newteam 
     #Allows the controller to use these instance variables to display information to user when called in erb file
+    binding.pry
     @name = params[:name] 
     @coach = params[:coach] 
     @pg = params[:pg]
